@@ -28,57 +28,102 @@
         <section class="code-section">
             <h2>Kode :</h2>
             <pre>
-class Mobil {
-    private $roda = 4;
+class Produk {
+    private $nama;
+    protected $harga;
+    public $stok;
 
-    private function jalan()
-    {
-        echo 'Mobil berjalan';
+    public function __construct($nama, $harga, $stok) {
+        $this->nama = $nama;
+        $this->harga = $harga;
+        $this->stok = $stok;
     }
 
-    public function jumlahRoda()
-    {
-        echo 'Jumlah roda: ' . $this->roda;
+    public function getNama() {
+        return $this->nama;
     }
 
-    public function aktifkanJalan()
-    {
-        $this->jalan();
+    public function setNama($nama) {
+        $this->nama = $nama;
+    }
+
+    public function getHarga() {
+        return $this->harga;
+    }
+
+    public function setHarga($harga) {
+        $this->harga = $harga;
+    }
+
+    public function getStok() {
+        return $this->stok;
+    }
+
+    public function setStok($stok) {
+        $this->stok = $stok;
     }
 }
 
-$avanza = new Mobil();
-$avanza->jumlahRoda();
-$avanza->aktifkanJalan();
+$produk = new Produk("Laptop", 15000000, 10);
+
+$produk->setNama("Smartphone");
+$produk->setHarga(5000000);
+$produk->setStok(25);
+
+echo "Nama Produk: " . $produk->getNama();
+echo "Harga Produk: " . $produk->getHarga();
+echo "Stok Produk: " . $produk->getStok();
             </pre>
         </section>
         <section class="result-section">
             <h2>Hasil :</h2>
             <p>
                 <?php
-                class Mobil {
-                    private $roda = 4;
-
-                    private function jalan()
-                    {
-                        echo 'Mobil berjalan';
+                class Produk {
+                    private $nama;
+                    protected $harga;
+                    public $stok;
+                
+                    public function __construct($nama, $harga, $stok) {
+                        $this->nama = $nama;
+                        $this->harga = $harga;
+                        $this->stok = $stok;
                     }
-
-                    public function jumlahRoda()
-                    {
-                        echo 'Jumlah roda: ' . $this->roda . '<br>';
+                
+                    public function getNama() {
+                        return $this->nama;
                     }
-
-                    public function aktifkanJalan()
-                    {
-                        $this->jalan();
+                
+                    public function setNama($nama) {
+                        $this->nama = $nama;
+                    }
+                
+                    public function getHarga() {
+                        return $this->harga;
+                    }
+                
+                    public function setHarga($harga) {
+                        $this->harga = $harga;
+                    }
+                
+                    public function getStok() {
+                        return $this->stok;
+                    }
+                
+                    public function setStok($stok) {
+                        $this->stok = $stok;
                     }
                 }
-
-                $avanza = new Mobil();
-                $avanza->jumlahRoda();
-                $avanza->aktifkanJalan();
-                ?>
+                
+                $produk = new Produk("Laptop", 15000000, 10);
+                
+                $produk->setNama("Smartphone");
+                $produk->setHarga(5000000);
+                $produk->setStok(25);
+                
+                echo "Nama Produk: " . $produk->getNama() . "<br>";
+                echo "Harga Produk: " . $produk->getHarga() . "<br>";
+                echo "Stok Produk: " . $produk->getStok() . "<br>";    
             </p>
         </section>
     </main>
