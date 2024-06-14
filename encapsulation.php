@@ -123,7 +123,8 @@ echo "Stok Produk: " . $produk->getStok();
                 
                 echo "Nama Produk: " . $produk->getNama() . "<br>";
                 echo "Harga Produk: " . $produk->getHarga() . "<br>";
-                echo "Stok Produk: " . $produk->getStok() . "<br>";    
+                echo "Stok Produk: " . $produk->getStok() . "<br>";
+                ?>
             </p>
         </section>
     </main>
